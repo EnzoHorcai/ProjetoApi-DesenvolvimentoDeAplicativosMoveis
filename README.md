@@ -8,11 +8,11 @@ Certifique-se de ter o Node.js instalado.
 Na pasta do projeto, instale as dependências:
 
 Bash
-npm install express
+"npm install express"
 Inicie o servidor:
 
 Bash
-node index.js
+"node index.js"
 A API estará disponível em: http://localhost:3000
 
 🛠 Endpoints
@@ -31,8 +31,8 @@ JSON
   "preco": 250.50,
   "categoria": "Periféricos"
 }
-Resposta de Sucesso:
 
+Resposta de Sucesso:
 Status: 201 Created
 
 Body: Objeto criado com o id gerado.
