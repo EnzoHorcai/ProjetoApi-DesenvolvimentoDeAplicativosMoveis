@@ -156,6 +156,7 @@ app.delete('/api/produtos/:id', (req, res) => {
     res.status(204).send();
 });
 
+
 // --- ROTAS DE FILMES ---
 
 app.post('/api/filmes', (req, res) => {
@@ -184,8 +185,21 @@ app.get('/api/filmes', (req, res) => {
     res.json(filmes);
 }); 
 
+// DELETE /api/filmes/:id - Deletar
+app.delete('/api/filmes/:id', (req, res) => {
+    const { id } = req.params;
+    const filmes = db.prepare('SELECT * FROM filmes WHERE id = ?').get(id);
+
+    if (!filmes) {
+        return res.status(404).json({ erro: 'Produto não encontrado' });
+    }
+
+    db.prepare('DELETE FROM filmes WHERE id = ?').run(id);
+    res.status(204).send();
+});
+
 // Inicialização do Servidor
 app.listen(3000, () => {
-    console.log('🚀 Servidor rodando em http://localhost:3000');
-    console.log('📦 Banco de Dados SQLite conectado.');
+    console.log(' Servidor rodando em http://localhost:3000');
+    console.log(' Banco de Dados SQLite conectado.');
 });
