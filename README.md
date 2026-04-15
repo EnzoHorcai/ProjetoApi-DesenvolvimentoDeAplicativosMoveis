@@ -77,3 +77,10 @@ Remoção de um filme através do ID. O servidor retorna o status correto de con
 ###Teste 3: Erro de Duração Insuficiente
 Tentativa de inserir um filme com duração inferior a 60 minutos. A validação impede o cadastro.
 <img width="1077" height="529" alt="image" src="https://github.com/user-attachments/assets/29ab60f1-0192-4086-a6b7-4dba0d506714" />
+
+---
+
+## Banco de Dados
+
+<img width="576" height="451" alt="image" src="https://github.com/user-attachments/assets/9ab57bf6-28ac-434e-8bbc-89ab63b7aeee" />
+
